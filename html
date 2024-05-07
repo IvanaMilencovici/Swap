@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navbar with Buttons Below</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+        color: black;
+        padding: 10px 20px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .logo img {
+        height: 80px; /* Adjusted logo size */
+    }
+    .search-bar {
+        margin: 0 20px;
+        margin-left: 40px; /* Increased left margin for spacing from logo */
+    }
+    .search-bar input {
+        width: 300px; 
+        padding: 8px;
+        background-color: #564E29;
+        color: #FEE8D5;
+        border: none
+    }
+    .search-bar input::placeholder {
+        color: #FEE8D5;
+    }
+    .nav-links {
+        display: flex;
+    }
+    .nav-links a {
+        color: black;
+        text-decoration: none;
+        padding: 10px;
+        margin-left: 10px;
+    }
+    .nav-links a img {
+        height: 20px;
+        margin-right: 5px;
+    }
+
+    /* Style for the buttons container below the navbar */
+    .button-container {
+        display: flex;
+        justify-content: flex-end; /* Align buttons to the far right */
+        padding: 10px 20px;
+        background-color: white;
+        border-top: 1px solid #ccc; /* Optional separator line */
+    }
+    .button {
+        display: flex;
+        align-items: center;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 10px;
+        background-color: white;
+        margin-left: 10px;
+        cursor: pointer;
+    }
+    .button img {
+        height: 15px; /* Smaller image for "Sort by" */
+        margin-left: 5px
+    }
+
+    /* Line to separate the navbar from the buttons */
+    .separator {
+        border-bottom: 1px solid #ccc; /* Thin line separating sections */
+    }
+</style>
+</head>
+<body>
+
+<div class="navbar">
+    <div class="logo">
+        <a href="/"><img src="https://previews.dropbox.com/p/thumb/ACR0a-UH6gQ3Ta1rUNBSxVoixgzng8rmjjuU2idEI899sbmj0gH7m-pXJ-nluopnNYjRRmt-36Qvn5erTd2cvoS4BXEG0uPueq0a-4W5FLBnrpG1TIqa0NDUT0ZG_EJGm_8GsUADLSYm0uzauX4GBpZOjuBU_8aLpAze5NMKD8o0HXwfYu_fh1mXXfwjyKM3PwKq19_41OFb6VC2Uw94bEjklh4uY3wSaR8UwKR9Z3r5UnAVmbNm0uQWVHEFIQxdRA8ixvWh26llQHhGpCaOBCbZnS-7WXSeSUliD9wk4y5q90dFLoQPUxsI_tDthpvhbHcDVyULansmrTBHJOuEXLWQ/p.png" alt="Logo"></a>
+    </div>
+    <div class="search-bar">
+        <input type="text" placeholder="Search...">
+    </div>
+    <div class="nav-links">
+        <a href="#"><img src="https://previews.dropbox.com/p/thumb/ACTYnd1Jkw5FpY9jWzjcasmyivyeeNmGn-xjByWEsW7450Khy_o2evOogjv8uwi6t6SPI3NPY7DToWOydCDa9S5QST5nQqWRh-IIfNv3KqKzBlexHJPsgkY0suijrdVzBkyyv-5UjDsKzr3bPJys1px-nJzyInq8bHZN3kb--4CF2OIjtwL2WIamjBCfh7sGkA_SVkmXBYKTxGuY6yGMt2hq9RsKHDyI7GqbGlRSxJxBz2eNicWat36caa0GGxERcKIHsl_oTvAv4K4dTkmbn8Jhxzb_G3YMbd6-BgoKGKBpWAvwXE_F-Vm3o5ILVDsfsRrWSrlZ6MvBthXwCDNQSIpE/p.png" alt="My Trades">My Trades</a>
+        <a href="#"><img src="https://previews.dropbox.com/p/thumb/ACRJtDQZH9IqIkSxlDTCMW11ASoKRrJTqJnwHRJHRdo99ip7peRza-HMP8NJ6ILge-DZOskdLzwj-zucRgkLwtcep9d6HHOw59skXdzdr85CwDyxKvMpu7H2cysS09F7bBVsBF_ljeI6oIGLjL-lRAKOlUSCD3kOp7K0xFcBWcTyySCjYtlow2xP8x_0x_gJObl6cfXmAtzllKAI4W7bcN72yaGET4HdmomIjFXnBIAQ4oqorKC9JcDqfbzuOH22WLvxrJFID1gZ4_1QVDVQcRke2JQ5ukXFpPhKzaM4Ve52LQEpwFCG_jVUq3qPcmaOtW5PbTBOXPG7IXq34WgM8z-l/p.png" alt=Messages>Messages</a>
+        <a href="#"><img src="https://previews.dropbox.com/p/thumb/ACTrmczyMCpXhTMx6JWPTK4TY5L3TQNFt4BGiU3eACIVTInxCLTOR9NNrRpDlukAYMNSflZzcIrvmFy8ngamjCL42XewwXPDGdZ7kgrLgFt2r-GLrnfL0fyDn2DH_IcHg4Penp9NWCotdIhd9p9LK8Wt319w4vrVZ96jMy4kda27b0tLhokcNjdsc8mMoYgJuwUmLt0gKKv_vW0kv54gSircaizauujaLXM45L9WrKly_HPPQkcBxpiozjG-hek0x5nwJSxFg8Ws8uY1TKc48d97RlQNlYeF-aP7kH84TEuZtrOTv_8x5kFmGI2iQyeJoSbjfpDJSH7pTmjruEz7sKo-/p.png" alt="Swap">Swap</a>
+        <a href="#"><img src="https://previews.dropbox.com/p/thumb/ACQIxV397Q18KqCpKjOJf7M7PqrS3AW3QvHyWlY9GBktL6Q9JSk_XX33oLSn25g9OQWfYXGjwBy_C9PTgkHZlC3tyBQ_vNBn4vemawb4Aabe14gPrckd-tEKfna6IyZs5im4GmpuK6y_glTzpJ0ELh4Rw4IvCk26SQDwBt1Pd7XzFETHm1KnTz7hvOtg3-2_YlqXEtaiLdkQgaTY2cu53M3lw2vbB3BnJlvEhcecYPJxWqzc6yOvtmWou9lVh1CcYqMpqowFeCzxwzF-nUMlQDnz5aBfNlGzuQlzsnPRtNdqy9Q69ew-inDWWaC1TymHQsvllqmsLferDGonWCl5J1EO/p.png"></a>
+    </div>
+</div>
+
+<!-- Separator between navbar and button section -->
+<div class="separator" style="border-bottom: 1px solid #ccc;"></div>
+
+<!-- Button container below navbar -->
+<div class="button-container">
+    <!-- "Sort by" button with an image on the right side -->
+    <div class="button">
+        <span style="color: black; font-weight: 300;">Sort by</span>
+        <img src="https://previews.dropbox.com/p/thumb/ACSxGqrBaxyWLomIMYczd1Vwt8oek2MMP8nRNEJnT_QU_6VTXgvklI5eCAq4DAn5FjwRYhonWSp1_qGgNvOiMWF3eCJuunyG4QIqcT33xlTWvJ4-YEWwusJm-ccHHFnMjQLgV0OXbGuoh11bBJsGdJCQuJqRC9_e4jktsezMsRWm6g_1hQA-QoTtipV9FXSaja6AZlYxIbFmN41FpUp2R22G435x_1XxQEyrj0psNNdy74ADGVk4ESRbTTh7K5DaV1cTHkjfFAArRAyIiyYW8N0gCDEu5oulO-so-WaQzlae1Urw6TUrSVMiUbvdxFcBlG9L3sLsaqrcI70_jh22xHgp/p.png" style="height: 15px;">
+    </div>
+
+    <!-- Button with an image -->
+    <div class="button">
+        <img src="https://previews.dropbox.com/p/thumb/ACTurEAyGaHl_LidwivvNXftjfrLcB3mVAMuu0deQ3oPqnENaOmhUP28i6FVnbJUKzqbuCIhNErA2aG-KjJNSjk0JPT9_PgOvl_5LK5j_JMuW6NREt2hSxiU3-irCEjj8e0KG8vlF7IwdKD4YnvEHiyc2fVtDMdVDRDBpZVr1PyefvFqmw0a8HgdB9aHPq3mHPpJQ1WyI6L4Gz61avvToHCGxNdbaamrHpWuByBPnqz8xMf7N_e60Ir1JngA5zs7fU-SbKP4W643UBG4djLAQbSZ4oja62tC1aYFyqM0UF0u7E12gnmS1tKDB5XtpFtgVtYsC71PjOIksfMy1PlisO0d/p.png" style="height: 20px;">
+    </div>
+
+    <!-- Another button with an image -->
+    <div class="button">
+        <img src="https://previews.dropbox.com/p/thumb/ACTsUwsqSzpFBQuuiQkXoQWMg_PVTCtIj1oMI4l944uzhxySHXwQZRNpImttmfSe2J9i24LT-rkbEGvdpScAR7vAg-rOq3OwYisivgVkxG3b-5DmyIXyY0B9od8qvpRkaBe3twMnwxDmIB7JUzLmOC8nx0Rt5mS-VMJaQ0fmqpPL-O2VqpATG32Lh0NGXFUmD8BYyNmge3ZegsazxEygCaL1lRHlSXUo12EWA4BYsrneqpfbRuL7eiGSQJCaJMhdgz7a8egFqWtOAGPJZd6G87UNeyls-sljxsTfNWrjgbP8gGywM7S83rUCipSSjRGJxw3c-r58JmqLuqyb1rp-xvcG/p.png" style="height: 20px;">
+    </div>
+
+</div>
+</body>
+<!-- Title section -->
+<div class="title-section" style="display: flex; justify-content: space-between; align-items: center; padding: 10px 20px;">
+    <h3 style="margin: 0; color: #333; font-size: 1.2em;">My Today's Top Picks</h3> <!-- Title -->
+</div>
+
+<!-- Horizontal scrollable row -->
+<div class="horizontal-scroll" style="display: flex; flex-direction: row; overflow-x: auto; white-space: nowrap; padding: 10px 20px;">
+    <!-- Left arrow for horizontal movement -->
+    <button style="border: none; background-color: white; cursor: pointer; flex-shrink: 0;">
+        <img src="https://cdn-icons-png.flaticon.com/512/271/271220.png" alt="Left Arrow" style="height: 20px;"> <!-- Left arrow -->
+    </button>
+
+    <!-- Scrollable images -->
+    <img src="https://via.placeholder.com/350x250" alt="Top Pick 1" style="margin-right: 10px; width: 350px; height: 250px; flex-shrink: 0;"> <!-- First image -->
+    <img src="https://via.placeholder.com/350x250" alt="Top Pick 2" style="margin-right: 10px; width: 350px; height: 250px; flex-shrink: 0;"> <!-- Second image -->
+    <img src="https://via.placeholder.com/350x250" alt="Top Pick 3" style="margin-right: 10px; width: 350px; height: 250px; flex-shrink: 0;"> <!-- Third image -->
+    <img src="https://via.placeholder.com/350x250" alt="Top Pick 4" style="margin-right: 10px; width: 350px; height: 250px; flex-shrink: 0;"> <!-- Fourth image -->
+    <img src="https://via.placeholder.com/350x250" alt="Top Pick 5" style="width: 350px; height: 250px; flex-shrink: 0;"> <!-- Fifth image -->
+</div>
